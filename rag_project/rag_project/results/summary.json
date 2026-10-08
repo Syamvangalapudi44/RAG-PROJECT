@@ -1,0 +1,689 @@
+{
+  "embeddings": "hash-tfidf-2048",
+  "generation": "extractive (no LLM)",
+  "summary": [
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "accuracy": 0.625,
+      "correct": 5,
+      "precision_at_3": 0.38095238095238093,
+      "hit_at_3": 1.0,
+      "n_chunks": 12,
+      "mean_chunk_chars": 221.91666666666666,
+      "mean_body_chars": 221.91666666666666,
+      "abstention_rate": 0.125,
+      "failures": {
+        "conflict": 2,
+        "fragment": 1
+      }
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "accuracy": 0.875,
+      "correct": 7,
+      "precision_at_3": 0.2857142857142857,
+      "hit_at_3": 0.8571428571428571,
+      "n_chunks": 12,
+      "mean_chunk_chars": 221.91666666666666,
+      "mean_body_chars": 221.91666666666666,
+      "abstention_rate": 0.125,
+      "failures": {
+        "fragment": 1
+      }
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "accuracy": 0.625,
+      "correct": 5,
+      "precision_at_3": 0.42857142857142855,
+      "hit_at_3": 1.0,
+      "n_chunks": 22,
+      "mean_chunk_chars": 161.6818181818182,
+      "mean_body_chars": 79.18181818181819,
+      "abstention_rate": 0.125,
+      "failures": {
+        "conflict": 3
+      }
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "accuracy": 1.0,
+      "correct": 8,
+      "precision_at_3": 0.38095238095238093,
+      "hit_at_3": 1.0,
+      "n_chunks": 22,
+      "mean_chunk_chars": 161.6818181818182,
+      "mean_body_chars": 79.18181818181819,
+      "abstention_rate": 0.125,
+      "failures": {}
+    }
+  ],
+  "rows": [
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 1,
+      "query": "What is the international travel per-diem?",
+      "answer": "Answer:\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "fixed-8",
+        "fixed-10",
+        "fixed-6"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": false,
+      "failure": "conflict"
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 2,
+      "query": "What is the current limit for home office equipment?",
+      "answer": "Answer:\n- INTERNAL MEMO - 14 August 2024 To: All staff Subject: Amendment to home office equipment limit  Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]",
+      "retrieved": [
+        "fixed-2",
+        "fixed-0",
+        "fixed-10"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "memo_2024_08.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 3,
+      "query": "I am a contractor. Will the company buy me a laptop?",
+      "answer": "Answer:\n- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]\n- 5.3 Contractors and vendor staff are not covered by this policy and m [equipment_policy.md]",
+      "retrieved": [
+        "fixed-0",
+        "fixed-6",
+        "fixed-7"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 4,
+      "query": "What notice period applies to a Lead?",
+      "answer": "Answer:\n- SEPARATION AND NOTICE  Notice period is determined by band, as follows. [notice_periods.md]\n- | Band | Role level          | Notice period | [notice_periods.md]",
+      "retrieved": [
+        "fixed-4",
+        "fixed-5",
+        "fixed-3"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "notice_periods.md"
+      ],
+      "correct": false,
+      "failure": "fragment"
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 5,
+      "query": "Above what amount do I need to keep a receipt?",
+      "answer": "Answer:\n- 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",
+      "retrieved": [
+        "fixed-9",
+        "fixed-5",
+        "fixed-11"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": false,
+      "failure": "conflict"
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 6,
+      "query": "What is the per-diem for a trip taken in June 2019?",
+      "answer": "Answer:\n- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "fixed-8",
+        "fixed-10",
+        "fixed-7"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 7,
+      "query": "Who approves business class travel?",
+      "answer": "Answer:\n- Business class requires Director approval in writing. [travel_policy_2024.md]",
+      "retrieved": [
+        "fixed-11",
+        "fixed-8",
+        "fixed-10"
+      ],
+      "rel_in_top3": 2,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "naive",
+      "qid": 8,
+      "query": "What is the company's parental leave entitlement?",
+      "answer": "ABSTAIN: nothing in the corpus resembles the question.",
+      "retrieved": [
+        "fixed-9",
+        "fixed-11",
+        "fixed-7"
+      ],
+      "rel_in_top3": 0,
+      "abstained": true,
+      "cited": [],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 1,
+      "query": "What is the international travel per-diem?",
+      "answer": "Answer:\n- 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "fixed-10",
+        "fixed-6",
+        "fixed-7"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 2,
+      "query": "What is the current limit for home office equipment?",
+      "answer": "Answer:\n- INTERNAL MEMO - 14 August 2024 To: All staff Subject: Amendment to home office equipment limit  Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]\nResolution:\n- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",
+      "retrieved": [
+        "fixed-2",
+        "fixed-3",
+        "fixed-0",
+        "fixed-10"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md",
+        "memo_2024_08.md",
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 3,
+      "query": "I am a contractor. Will the company buy me a laptop?",
+      "answer": "Answer:\n- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]\n- 5.3 Contractors and vendor staff are not covered by this policy and m [equipment_policy.md]\nResolution:\n- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.",
+      "retrieved": [
+        "fixed-2",
+        "fixed-3",
+        "fixed-0",
+        "fixed-6",
+        "fixed-7"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md",
+        "memo_2024_08.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 4,
+      "query": "What notice period applies to a Lead?",
+      "answer": "Answer:\n- SEPARATION AND NOTICE  Notice period is determined by band, as follows. [notice_periods.md]\n- | Band | Role level          | Notice period | [notice_periods.md]\nResolution:\n- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.",
+      "retrieved": [
+        "fixed-2",
+        "fixed-3",
+        "fixed-4",
+        "fixed-5"
+      ],
+      "rel_in_top3": 0,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md",
+        "memo_2024_08.md",
+        "notice_periods.md"
+      ],
+      "correct": false,
+      "failure": "fragment"
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 5,
+      "query": "Above what amount do I need to keep a receipt?",
+      "answer": "Answer:\n- 3.4 Receipts are required for any single expense above INR 2,500. [travel_policy_2024.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",
+      "retrieved": [
+        "fixed-5",
+        "fixed-11",
+        "fixed-7"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 6,
+      "query": "What is the per-diem for a trip taken in June 2019?",
+      "answer": "Answer:\n- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2019-06-15 (date taken from the question) travel_policy_2019.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.1 Domestic travel per-diem is INR 3,200 per day. [travel_policy_2024.md]\n- (superseded, not in force) 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]",
+      "retrieved": [
+        "fixed-8",
+        "fixed-7",
+        "fixed-6"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 7,
+      "query": "Who approves business class travel?",
+      "answer": "Answer:\n- Business class requires Director approval in writing. [travel_policy_2024.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",
+      "retrieved": [
+        "fixed-11",
+        "fixed-10",
+        "fixed-6"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "fixed",
+      "pipeline": "resolved",
+      "qid": 8,
+      "query": "What is the company's parental leave entitlement?",
+      "answer": "ABSTAIN: the documents do not cover this topic (coverage 0.00).",
+      "retrieved": [
+        "fixed-9",
+        "fixed-11",
+        "fixed-7"
+      ],
+      "rel_in_top3": 0,
+      "abstained": true,
+      "cited": [],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 1,
+      "query": "What is the international travel per-diem?",
+      "answer": "Answer:\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-15",
+        "structure-19",
+        "structure-14"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": false,
+      "failure": "conflict"
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 2,
+      "query": "What is the current limit for home office equipment?",
+      "answer": "Answer:\n- 5.2 Home office equipment shall not exceed INR 25,000 per employee in any rolling twelve-month period. [equipment_policy.md]",
+      "retrieved": [
+        "structure-4",
+        "structure-1",
+        "structure-0"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md"
+      ],
+      "correct": false,
+      "failure": "conflict"
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 3,
+      "query": "I am a contractor. Will the company buy me a laptop?",
+      "answer": "Answer:\n- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]\n- 5.3 Contractors and vendor staff are not covered by this policy and must supply their own equipment. [equipment_policy.md]",
+      "retrieved": [
+        "structure-0",
+        "structure-11",
+        "structure-2"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 4,
+      "query": "What notice period applies to a Lead?",
+      "answer": "Answer:\n- Band=4; Role level=Lead / Manager; Notice period=90 days [notice_periods.md]",
+      "retrieved": [
+        "structure-8",
+        "structure-6",
+        "structure-5"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "notice_periods.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 5,
+      "query": "Above what amount do I need to keep a receipt?",
+      "answer": "Answer:\n- 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-17",
+        "structure-21",
+        "structure-10"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": false,
+      "failure": "conflict"
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 6,
+      "query": "What is the per-diem for a trip taken in June 2019?",
+      "answer": "Answer:\n- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-14",
+        "structure-15",
+        "structure-19"
+      ],
+      "rel_in_top3": 2,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 7,
+      "query": "Who approves business class travel?",
+      "answer": "Answer:\n- Business class requires Director approval in writing. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-16",
+        "structure-20",
+        "structure-17"
+      ],
+      "rel_in_top3": 2,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "naive",
+      "qid": 8,
+      "query": "What is the company's parental leave entitlement?",
+      "answer": "ABSTAIN: nothing in the corpus resembles the question.",
+      "retrieved": [
+        "structure-16",
+        "structure-0",
+        "structure-20"
+      ],
+      "rel_in_top3": 0,
+      "abstained": true,
+      "cited": [],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 1,
+      "query": "What is the international travel per-diem?",
+      "answer": "Answer:\n- 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-19",
+        "structure-18",
+        "structure-11"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 2,
+      "query": "What is the current limit for home office equipment?",
+      "answer": "Answer:\n- Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]\nResolution:\n- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 5.2 Home office equipment shall not exceed INR 25,000 per employee in any rolling twelve-month period. [equipment_policy.md]",
+      "retrieved": [
+        "structure-4",
+        "structure-1",
+        "structure-0"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md",
+        "memo_2024_08.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 3,
+      "query": "I am a contractor. Will the company buy me a laptop?",
+      "answer": "Answer:\n- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]\n- 5.3 Contractors and vendor staff are not covered by this policy and must supply their own equipment. [equipment_policy.md]",
+      "retrieved": [
+        "structure-0",
+        "structure-11",
+        "structure-2"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 4,
+      "query": "What notice period applies to a Lead?",
+      "answer": "Answer:\n- Band=4; Role level=Lead / Manager; Notice period=90 days [notice_periods.md]",
+      "retrieved": [
+        "structure-8",
+        "structure-6",
+        "structure-5"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "notice_periods.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 5,
+      "query": "Above what amount do I need to keep a receipt?",
+      "answer": "Answer:\n- 3.4 Receipts are required for any single expense above INR 2,500. [travel_policy_2024.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",
+      "retrieved": [
+        "structure-21",
+        "structure-10",
+        "structure-13"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 6,
+      "query": "What is the per-diem for a trip taken in June 2019?",
+      "answer": "Answer:\n- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]\n- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]\nResolution:\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2019-06-15 (date taken from the question) travel_policy_2019.md is the version in force.\nSuperseded / not-in-force versions (shown for transparency, NOT current):\n- (superseded, not in force) 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]\n- (superseded, not in force) 3.1 Domestic travel per-diem is INR 3,200 per day. [travel_policy_2024.md]",
+      "retrieved": [
+        "structure-14",
+        "structure-15",
+        "structure-13"
+      ],
+      "rel_in_top3": 2,
+      "abstained": false,
+      "cited": [
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 7,
+      "query": "Who approves business class travel?",
+      "answer": "Answer:\n- Business class requires Director approval in writing. [travel_policy_2024.md]\nResolution:\n- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.\n- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",
+      "retrieved": [
+        "structure-4",
+        "structure-20",
+        "structure-1",
+        "structure-21"
+      ],
+      "rel_in_top3": 1,
+      "abstained": false,
+      "cited": [
+        "equipment_policy.md",
+        "memo_2024_08.md",
+        "travel_policy_2019.md",
+        "travel_policy_2024.md"
+      ],
+      "correct": true,
+      "failure": null
+    },
+    {
+      "chunking": "structure",
+      "pipeline": "resolved",
+      "qid": 8,
+      "query": "What is the company's parental leave entitlement?",
+      "answer": "ABSTAIN: the documents do not cover this topic (coverage 0.00).",
+      "retrieved": [
+        "structure-16",
+        "structure-0",
+        "structure-20"
+      ],
+      "rel_in_top3": 0,
+      "abstained": true,
+      "cited": [],
+      "correct": true,
+      "failure": null
+    }
+  ]
+}

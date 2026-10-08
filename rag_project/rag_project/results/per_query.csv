@@ -1,0 +1,113 @@
+chunking,pipeline,qid,query,answer,cited,correct,failure
+fixed,naive,1,What is the international travel per-diem?,"Answer:
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md,False,conflict
+fixed,naive,2,What is the current limit for home office equipment?,"Answer:
+- INTERNAL MEMO - 14 August 2024 To: All staff Subject: Amendment to home office equipment limit  Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]",memo_2024_08.md,True,
+fixed,naive,3,I am a contractor. Will the company buy me a laptop?,"Answer:
+- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]
+- 5.3 Contractors and vendor staff are not covered by this policy and m [equipment_policy.md]",equipment_policy.md,True,
+fixed,naive,4,What notice period applies to a Lead?,"Answer:
+- SEPARATION AND NOTICE  Notice period is determined by band, as follows. [notice_periods.md]
+- | Band | Role level          | Notice period | [notice_periods.md]",notice_periods.md,False,fragment
+fixed,naive,5,Above what amount do I need to keep a receipt?,"Answer:
+- 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",travel_policy_2019.md,False,conflict
+fixed,naive,6,What is the per-diem for a trip taken in June 2019?,"Answer:
+- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md,True,
+fixed,naive,7,Who approves business class travel?,"Answer:
+- Business class requires Director approval in writing. [travel_policy_2024.md]",travel_policy_2024.md,True,
+fixed,naive,8,What is the company's parental leave entitlement?,ABSTAIN: nothing in the corpus resembles the question.,,True,
+fixed,resolved,1,What is the international travel per-diem?,"Answer:
+- 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+fixed,resolved,2,What is the current limit for home office equipment?,"Answer:
+- INTERNAL MEMO - 14 August 2024 To: All staff Subject: Amendment to home office equipment limit  Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]
+Resolution:
+- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",equipment_policy.md;memo_2024_08.md;travel_policy_2019.md;travel_policy_2024.md,True,
+fixed,resolved,3,I am a contractor. Will the company buy me a laptop?,"Answer:
+- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]
+- 5.3 Contractors and vendor staff are not covered by this policy and m [equipment_policy.md]
+Resolution:
+- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.",equipment_policy.md;memo_2024_08.md,True,
+fixed,resolved,4,What notice period applies to a Lead?,"Answer:
+- SEPARATION AND NOTICE  Notice period is determined by band, as follows. [notice_periods.md]
+- | Band | Role level          | Notice period | [notice_periods.md]
+Resolution:
+- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.",equipment_policy.md;memo_2024_08.md;notice_periods.md,False,fragment
+fixed,resolved,5,Above what amount do I need to keep a receipt?,"Answer:
+- 3.4 Receipts are required for any single expense above INR 2,500. [travel_policy_2024.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+fixed,resolved,6,What is the per-diem for a trip taken in June 2019?,"Answer:
+- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2019-06-15 (date taken from the question) travel_policy_2019.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.1 Domestic travel per-diem is INR 3,200 per day. [travel_policy_2024.md]
+- (superseded, not in force) 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+fixed,resolved,7,Who approves business class travel?,"Answer:
+- Business class requires Director approval in writing. [travel_policy_2024.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",travel_policy_2019.md;travel_policy_2024.md,True,
+fixed,resolved,8,What is the company's parental leave entitlement?,ABSTAIN: the documents do not cover this topic (coverage 0.00).,,True,
+structure,naive,1,What is the international travel per-diem?,"Answer:
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md,False,conflict
+structure,naive,2,What is the current limit for home office equipment?,"Answer:
+- 5.2 Home office equipment shall not exceed INR 25,000 per employee in any rolling twelve-month period. [equipment_policy.md]",equipment_policy.md,False,conflict
+structure,naive,3,I am a contractor. Will the company buy me a laptop?,"Answer:
+- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]
+- 5.3 Contractors and vendor staff are not covered by this policy and must supply their own equipment. [equipment_policy.md]",equipment_policy.md,True,
+structure,naive,4,What notice period applies to a Lead?,"Answer:
+- Band=4; Role level=Lead / Manager; Notice period=90 days [notice_periods.md]",notice_periods.md,True,
+structure,naive,5,Above what amount do I need to keep a receipt?,"Answer:
+- 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",travel_policy_2019.md,False,conflict
+structure,naive,6,What is the per-diem for a trip taken in June 2019?,"Answer:
+- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md,True,
+structure,naive,7,Who approves business class travel?,"Answer:
+- Business class requires Director approval in writing. [travel_policy_2019.md]",travel_policy_2019.md,True,
+structure,naive,8,What is the company's parental leave entitlement?,ABSTAIN: nothing in the corpus resembles the question.,,True,
+structure,resolved,1,What is the international travel per-diem?,"Answer:
+- 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+structure,resolved,2,What is the current limit for home office equipment?,"Answer:
+- Effective immediately, the limit stated in clause 5.2 of the Equipment and Asset Policy is raised to INR 40,000 per employee per rolling twelve-month period. [memo_2024_08.md]
+Resolution:
+- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 5.2 Home office equipment shall not exceed INR 25,000 per employee in any rolling twelve-month period. [equipment_policy.md]",equipment_policy.md;memo_2024_08.md,True,
+structure,resolved,3,I am a contractor. Will the company buy me a laptop?,"Answer:
+- 5.1 The company provides a laptop to every full-time employee. [equipment_policy.md]
+- 5.3 Contractors and vendor staff are not covered by this policy and must supply their own equipment. [equipment_policy.md]",equipment_policy.md,True,
+structure,resolved,4,What notice period applies to a Lead?,"Answer:
+- Band=4; Role level=Lead / Manager; Notice period=90 days [notice_periods.md]",notice_periods.md,True,
+structure,resolved,5,Above what amount do I need to keep a receipt?,"Answer:
+- 3.4 Receipts are required for any single expense above INR 2,500. [travel_policy_2024.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.4 Receipts are required for any single expense above INR 1,000. [travel_policy_2019.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+structure,resolved,6,What is the per-diem for a trip taken in June 2019?,"Answer:
+- 3.1 Domestic travel per-diem is INR 2,000 per day. [travel_policy_2019.md]
+- 3.2 International travel per-diem is INR 6,500 per day. [travel_policy_2019.md]
+Resolution:
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2019-06-15 (date taken from the question) travel_policy_2019.md is the version in force.
+Superseded / not-in-force versions (shown for transparency, NOT current):
+- (superseded, not in force) 3.2 International travel per-diem is INR 9,000 per day. [travel_policy_2024.md]
+- (superseded, not in force) 3.1 Domestic travel per-diem is INR 3,200 per day. [travel_policy_2024.md]",travel_policy_2019.md;travel_policy_2024.md,True,
+structure,resolved,7,Who approves business class travel?,"Answer:
+- Business class requires Director approval in writing. [travel_policy_2024.md]
+Resolution:
+- memo_2024_08.md (effective 2024-08-14) amends clause 5.2 of equipment_policy.md; the amended figure applies and the original clause is superseded.
+- travel_policy_2024.md (effective 2024-01-01) supersedes travel_policy_2019.md (effective 2019-04-01); on 2026-10-08 travel_policy_2024.md is the version in force.",equipment_policy.md;memo_2024_08.md;travel_policy_2019.md;travel_policy_2024.md,True,
+structure,resolved,8,What is the company's parental leave entitlement?,ABSTAIN: the documents do not cover this topic (coverage 0.00).,,True,

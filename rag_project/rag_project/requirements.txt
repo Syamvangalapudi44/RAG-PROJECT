@@ -1,0 +1,4 @@
+numpy
+matplotlib
+# optional: real embeddings (set EMBED=st)
+# sentence-transformers
